@@ -1,4 +1,4 @@
-# testing-firebase-push
+# firebase-push-example
 
 A repository to test out using `firebase.database().ref().push`
 

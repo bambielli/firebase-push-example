@@ -13,16 +13,17 @@ firebase.initializeApp(config)
 var database = firebase.database()
 
 // onclick listener for the submit button
-document.querySelector("input[name='submit']").onclick = function (event) {
+document.querySelector('input[name="submit"]').onclick = function (event) {
   event.preventDefault()
-  var name = document.querySelector("input[name='name']").value
-  var email = document.querySelector("input[name='email']").value
-  var rate = document.querySelector("input[name='rate']").value
+  var name = document.querySelector('input[name="name"]').value
+  var email = document.querySelector('input[name="email"]').value
+  var rate = document.querySelector('input[name="rate"]').value
   database.ref('users').push({
     name: name,
     email: email,
     rate: rate
   })
+  document.querySelector('form').reset()
 }
 
 /*
@@ -53,7 +54,7 @@ const generateTableRow = function (name, email, rate, key) {
     database.ref('users').child(key).set(null)
   }
 
-  // using "once" prevents unnecessary firebase listeners from remaining attached after
+  // using 'once' prevents unnecessary firebase listeners from remaining attached after
   // a deletion occurs.
   database.ref('users').once('child_removed', function () {
     tableRow.parentNode.removeChild(tableRow) // need to call on parentNode

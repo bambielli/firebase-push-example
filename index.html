@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>testing-push</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
   </head>
   <body>
   <table>
@@ -23,7 +24,19 @@
     <input type="submit" name="submit" value="submit" />
   </form>
 
+  <div>
+  <h2>Explanation:</h2>
+    <p>
+      This form uses <strong><a href="https://firebase.google.com/">Firebase</a></strong> to persist data, and is a proof of concept for using the `push` method for storing data.
+    </p>
+    <p>
+      The delete buttons trigger a `set` operation at the key of the row to be deleted, which is achieved by setting the key to null.
+    </p>
+    <p>
+      Firebase is a really quick and easy way to get persistence, authentication, and storage working for an app. Definitely impressed!
+    </p>
+  </div>
     <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-    <script type="text/javascript" src="test.js"></script>
+    <script type="text/javascript" src="assets/test.js"></script>
   </body>
 </html>
