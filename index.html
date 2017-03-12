@@ -23,6 +23,9 @@
     <input type="number" name="rate" placeholder="Rate"/>
     <input type="submit" name="submit" value="submit" />
   </form>
+  <div id="validation" class="hidden validation">
+    <p>You need to fill in each form field to submit a value</p>
+  </div>
 
   <div>
   <h2>Explanation:</h2>
@@ -33,10 +36,13 @@
       The delete buttons trigger a `set` operation at the key of the row to be deleted, which is achieved by setting the key to null.
     </p>
     <p>
-      Firebase is a really quick and easy way to get persistence, authentication, and storage working for an app. Definitely impressed!
+      Firebase's "Realtime Database" is particularly interesting: value changes are pushed to all connected clients within miliseconds!
+    </p>
+    <p>
+      <strong>Try it out by opening this page in several windows, and adding / removing values in each.</strong>
     </p>
   </div>
     <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-    <script type="text/javascript" src="assets/test.js"></script>
+    <script type="text/javascript" src="assets/script.js"></script>
   </body>
 </html>
